@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: 873135413040.dkr.ecr.us-east-1.amazonaws.com/pharma-ui
-  tag: latest
+  tag: v1.0.1
   pullPolicy: Always
 
 service:
@@ -52,8 +52,8 @@ readinessProbe:
   successThreshold: 1
 
 configmap:
-  API_BASE_URL: "http://dev.pharma.internal/api"
-  AUTH_BASE_URL: "http://dev.pharma.internal/auth"
+  API_BASE_URL: "/api"
+  AUTH_BASE_URL: "/api/auth"
   ENV: dev
 
 serviceAccount:
